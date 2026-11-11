@@ -90,7 +90,7 @@ body {
   stroke-linecap: round;
   stroke-dasharray: 263.89;
   stroke-dashoffset: 263.89;
-  transition: stroke-dashoffset 1s ease;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .percentage {
