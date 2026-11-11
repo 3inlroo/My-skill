@@ -1,0 +1,132 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  background: transparent;
+}
+
+:root {
+  --main-purple: #9B7BB5;
+  --dark-purple: #756681;
+  --light-purple: #E9DDF5;
+  --gold: #D6AE57;
+  --sub-purple: #A18AAE;
+}
+
+.skills-container {
+  width: 100%;
+  padding: 12px 8px;
+  color: var(--dark-purple);
+}
+
+.skills-header {
+  margin-bottom: 24px;
+}
+
+.skills-header h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--dark-purple);
+}
+
+.skills-header h2 span {
+  color: var(--gold);
+}
+
+.skills-header p {
+  margin: 5px 0 0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--sub-purple);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px 12px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.circle {
+  width: 100%;
+  max-width: 105px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.circle-bg,
+.circle-progress {
+  fill: none;
+  stroke-width: 8;
+}
+
+.circle-bg {
+  stroke: var(--light-purple);
+}
+
+.circle-progress {
+  stroke: var(--main-purple);
+  stroke-linecap: round;
+  stroke-dasharray: 263.89;
+  stroke-dashoffset: 263.89;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--dark-purple);
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dark-purple);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.skills-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+
+  .circle {
+    max-width: 90px;
+  }
+}
